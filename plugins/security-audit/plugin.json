@@ -1,0 +1,16 @@
+{
+  "name": "security-audit",
+  "version": "1.0.0",
+  "description": "Scoped OWASP-oriented audit and bounded pre-tool secret guard.",
+  "author": { "name": "MonkeysCode" },
+  "license": "MIT",
+  "commands": "commands",
+  "skills": "skills",
+  "hooks": "hooks/hooks.json",
+  "monkeyscode": {
+    "apps": ["ide", "agent", "cli"],
+    "minVersions": { "ide": "1.3.10", "agent": "1.1.8", "cli": "1.1.10" },
+    "categories": ["security"],
+    "icon": "icon.svg"
+  }
+}

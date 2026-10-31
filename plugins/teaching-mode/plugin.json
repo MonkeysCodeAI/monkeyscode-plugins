@@ -1,0 +1,6 @@
+{
+  "name": "teaching-mode", "version": "1.0.0",
+  "description": "An opt-in explanatory output style and practical learning skill.",
+  "author": {"name": "MonkeysCode"}, "license": "MIT", "skills": "skills", "outputStyles": "output-styles",
+  "monkeyscode": {"apps": ["ide", "agent", "cli"], "minVersions": {"ide": "1.3.10", "agent": "1.1.8", "cli": "1.1.10"}, "categories": ["Education", "Productivity"], "icon": "icon.svg"}
+}

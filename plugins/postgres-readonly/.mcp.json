@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "postgres-readonly": {
+      "disabled": true,
+      "command": "node",
+      "args": ["${PLUGIN_ROOT}/scripts/server.mjs"],
+      "env": {
+        "MONKEYSCODE_PSQL_PATH": "${MONKEYSCODE_PSQL_PATH}",
+        "MONKEYSCODE_PSQL_SHA256": "${MONKEYSCODE_PSQL_SHA256}",
+        "PGHOST": "${PGHOST}",
+        "PGPORT": "${PGPORT}",
+        "PGDATABASE": "${PGDATABASE}",
+        "PGUSER": "${PGUSER}",
+        "PGPASSFILE": "${PGPASSFILE}",
+        "PGSSLROOTCERT": "${PGSSLROOTCERT}"
+      }
+    }
+  }
+}

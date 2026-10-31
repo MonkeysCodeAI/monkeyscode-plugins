@@ -1,0 +1,6 @@
+{
+  "name": "cost-guard", "version": "1.0.0",
+  "description": "Bounded advisory cost reporting and efficient context guidance; not a budget gate.",
+  "author": {"name": "MonkeysCode"}, "license": "MIT", "skills": "skills", "hooks": "hooks/hooks.json",
+  "monkeyscode": {"apps": ["ide", "agent", "cli"], "minVersions": {"ide": "1.3.10", "agent": "1.1.8", "cli": "1.1.10"}, "categories": ["Cost Awareness", "Productivity"], "icon": "icon.svg"}
+}

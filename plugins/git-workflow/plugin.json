@@ -1,0 +1,4 @@
+{
+  "name": "git-workflow", "version": "1.0.0", "description": "Draft conventional commits, pull requests and changelogs without altering staging.", "author": "MonkeysCode", "license": "MIT", "commands": "commands",
+  "monkeyscode": { "apps": ["ide", "agent", "cli"], "minVersions": {"ide":"1.3.10","agent":"1.1.8","cli":"1.1.10"}, "categories": ["development","git"], "icon": "icon.svg", "capuchinPreferred": ["commands/commit.md","commands/changelog.md"] }
+}

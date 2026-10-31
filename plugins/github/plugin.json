@@ -1,0 +1,4 @@
+{
+  "name": "github", "version": "1.0.0", "description": "Approval-bound issue workflows with an opt-in official GitHub MCP connection.", "author": "MonkeysCode", "license": "MIT", "commands": "commands", "mcpServers": ".mcp.json",
+  "monkeyscode": { "apps": ["ide","agent","cli"], "minVersions": {"ide":"1.3.10","agent":"1.1.8","cli":"1.1.10"}, "categories": ["development","integrations"], "icon": "icon.svg" }
+}

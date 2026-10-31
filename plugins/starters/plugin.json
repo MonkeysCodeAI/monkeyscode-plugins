@@ -1,0 +1,4 @@
+{
+  "name": "starters", "version": "1.0.0", "description": "Inert Next.js test-billing and Fastify API starter recipes.", "author": "MonkeysCode", "license": "MIT", "skills": "skills",
+  "monkeyscode": { "apps": ["agent","cli"], "minVersions": {"agent":"1.1.8","cli":"1.1.10"}, "starters": "starters", "categories": ["templates"], "icon": "icon.svg" }
+}

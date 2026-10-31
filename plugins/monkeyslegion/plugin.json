@@ -1,0 +1,4 @@
+{
+  "name": "monkeyslegion", "version": "1.0.0", "description": "MonkeysLegion PHP 8.4 guidance and a verified-upstream bootstrap recipe.", "author": "MonkeysCode", "license": "MIT", "skills": "skills",
+  "monkeyscode": { "apps": ["ide","agent","cli"], "minVersions": {"ide":"1.3.10","agent":"1.1.8","cli":"1.1.10"}, "starters": "starters", "categories": ["php","templates"], "icon": "icon.svg" }
+}

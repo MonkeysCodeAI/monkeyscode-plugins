@@ -1,0 +1,4 @@
+{
+  "name": "sentry", "version": "1.0.0", "description": "Triage Sentry evidence; OAuth MCP remains disabled until manually connected in a supported host.", "author": "MonkeysCode", "license": "MIT", "commands": "commands", "mcpServers": ".mcp.json",
+  "monkeyscode": { "apps": ["ide","agent","cli"], "minVersions": {"ide":"1.3.10","agent":"1.1.8","cli":"1.1.10"}, "categories": ["observability","integrations"], "icon": "icon.svg" }
+}

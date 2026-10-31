@@ -1,0 +1,6 @@
+{
+  "name": "nextjs-toolkit", "version": "1.0.0",
+  "description": "Version-aware App Router, server component and caching guidance.",
+  "author": {"name": "MonkeysCode"}, "license": "MIT", "skills": "skills", "commands": "commands",
+  "monkeyscode": {"apps": ["ide", "agent", "cli"], "minVersions": {"ide": "1.3.10", "agent": "1.1.8", "cli": "1.1.10"}, "categories": ["JavaScript", "Web Frameworks"], "icon": "icon.svg", "capuchinPreferred": ["commands/route.md"]}
+}

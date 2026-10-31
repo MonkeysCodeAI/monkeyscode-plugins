@@ -1,0 +1,15 @@
+{
+  "name": "code-review",
+  "version": "1.0.0",
+  "description": "Evidence-based read-only code review with optional SARIF output.",
+  "author": { "name": "MonkeysCode" },
+  "license": "MIT",
+  "commands": "commands",
+  "agents": "agents",
+  "monkeyscode": {
+    "apps": ["ide", "agent", "cli"],
+    "minVersions": { "ide": "1.3.10", "agent": "1.1.8", "cli": "1.1.10" },
+    "categories": ["quality"],
+    "icon": "icon.svg"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "plugins": [
+    {"id":"MonkeysCode/core-skills","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":1,"apps":["ide","agent","cli"],"path":"plugins/core-skills","version":"1.0.0"},
+    {"id":"MonkeysCode/drupal-toolkit","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":1,"apps":["ide","agent","cli"],"path":"plugins/drupal-toolkit","version":"1.0.0"},
+    {"id":"MonkeysCode/code-review","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":1,"apps":["ide","agent","cli"],"path":"plugins/code-review","version":"1.0.0"},
+    {"id":"MonkeysCode/test-writer","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":1,"apps":["ide","agent","cli"],"path":"plugins/test-writer","version":"1.0.0"},
+    {"id":"MonkeysCode/security-audit","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":1,"apps":["ide","agent","cli"],"path":"plugins/security-audit","version":"1.0.0"},
+    {"id":"MonkeysCode/git-workflow","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":1,"apps":["ide","agent","cli"],"path":"plugins/git-workflow","version":"1.0.0"},
+    {"id":"MonkeysCode/docs-writer","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":1,"apps":["ide","agent","cli"],"path":"plugins/docs-writer","version":"1.0.0"},
+    {"id":"MonkeysCode/github","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":1,"apps":["ide","agent","cli"],"path":"plugins/github","version":"1.0.0"},
+    {"id":"MonkeysCode/postgres-readonly","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":1,"apps":["ide","agent","cli"],"path":"plugins/postgres-readonly","version":"1.1.0"},
+    {"id":"MonkeysCode/sentry","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":1,"apps":["ide","agent","cli"],"path":"plugins/sentry","version":"1.0.0"},
+    {"id":"MonkeysCode/starters","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":1,"apps":["agent","cli"],"path":"plugins/starters","version":"1.0.0"},
+    {"id":"MonkeysCode/monkeyslegion","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":1,"apps":["ide","agent","cli"],"path":"plugins/monkeyslegion","version":"1.0.0"},
+    {"id":"MonkeysCode/laravel-toolkit","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":2,"apps":["ide","agent","cli"],"path":"plugins/laravel-toolkit","version":"1.0.0"},
+    {"id":"MonkeysCode/nextjs-toolkit","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":2,"apps":["ide","agent","cli"],"path":"plugins/nextjs-toolkit","version":"1.0.0"},
+    {"id":"MonkeysCode/python-api","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":2,"apps":["ide","agent","cli"],"path":"plugins/python-api","version":"1.0.0"},
+    {"id":"MonkeysCode/devops","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":2,"apps":["ide","agent","cli"],"path":"plugins/devops","version":"1.0.0"},
+    {"id":"MonkeysCode/cloud-clis","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":2,"apps":["ide","agent","cli"],"path":"plugins/cloud-clis","version":"1.0.0"},
+    {"id":"MonkeysCode/accessibility","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":2,"apps":["ide","agent"],"path":"plugins/accessibility","version":"1.0.0"},
+    {"id":"MonkeysCode/cost-guard","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":2,"apps":["ide","agent","cli"],"path":"plugins/cost-guard","version":"1.0.0"},
+    {"id":"MonkeysCode/teaching-mode","publisher":{"name":"MonkeysCode"},"rights":{"firstParty":true,"status":"draft"},"priority":2,"apps":["ide","agent","cli"],"path":"plugins/teaching-mode","version":"1.0.0"}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "postgres-readonly",
+  "version": "1.1.0",
+  "description": "Opt-in structured PostgreSQL inspection through a verified local psql binary; no arbitrary SQL.",
+  "author": "MonkeysCode",
+  "license": "MIT",
+  "skills": "skills",
+  "mcp": ".mcp.json",
+  "monkeyscode": {
+    "apps": ["ide", "agent", "cli"],
+    "minVersions": { "ide": "1.3.10", "agent": "1.1.8", "cli": "1.1.10" },
+    "categories": ["database", "security"],
+    "icon": "icon.svg"
+  }
+}

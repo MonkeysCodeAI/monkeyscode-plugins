@@ -1,0 +1,6 @@
+{
+  "name": "python-api", "version": "1.0.0",
+  "description": "FastAPI and Django API design and test patterns.",
+  "author": {"name": "MonkeysCode"}, "license": "MIT", "skills": "skills",
+  "monkeyscode": {"apps": ["ide", "agent", "cli"], "minVersions": {"ide": "1.3.10", "agent": "1.1.8", "cli": "1.1.10"}, "categories": ["Python", "APIs"], "icon": "icon.svg"}
+}
