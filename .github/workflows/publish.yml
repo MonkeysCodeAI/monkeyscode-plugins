@@ -1,5 +1,10 @@
 name: Immutable first-party publication
 on:
+  workflow_call:
+    inputs:
+      plugin:
+        required: true
+        type: string
   workflow_dispatch:
     inputs:
       plugin:
