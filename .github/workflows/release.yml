@@ -11,6 +11,6 @@ permissions:
   id-token: write
 jobs:
   publish:
-    uses: MonkeysCodeAI/monkeyscode-plugins/.github/workflows/publish.yml@8ccf2e062b050563a7399c636c23655df402aaea
+    uses: MonkeysCodeAI/monkeyscode-plugins/.github/workflows/publish.yml@229f8d235bf7aed5e9459b15c1d72fe71b7f50bf
     with:
       plugin: ${{ inputs.plugin }}
