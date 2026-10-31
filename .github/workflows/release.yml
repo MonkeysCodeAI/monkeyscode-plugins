@@ -1,0 +1,16 @@
+name: Publish immutable package
+on:
+  workflow_dispatch:
+    inputs:
+      plugin:
+        description: Exact catalog package ID
+        type: string
+        required: true
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  publish:
+    uses: MonkeysCodeAI/monkeyscode-plugins/.github/workflows/publish.yml@8ccf2e062b050563a7399c636c23655df402aaea
+    with:
+      plugin: ${{ inputs.plugin }}
