@@ -1,0 +1,48 @@
+name: Immutable first-party publication
+on:
+  workflow_dispatch:
+    inputs:
+      plugin:
+        description: 'Exact catalog ID (MonkeysCode/name); validated against catalog.json'
+        required: true
+        type: string
+permissions:
+  contents: read
+  id-token: write
+concurrency:
+  group: first-party-publication-${{ inputs.plugin }}
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    environment: first-party-plugin-release
+    steps:
+      - name: Fail closed until central CI is ready
+        env:
+          ENABLED: ${{ vars.MARKETPLACE_CI_ENABLED }}
+        run: test "$ENABLED" = true
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.13.0'
+      - name: Publish exact preview bytes (no plugin execution)
+        env:
+          PLUGIN_ID: ${{ inputs.plugin }}
+          MARKETPLACE_CI_ENABLED: ${{ vars.MARKETPLACE_CI_ENABLED }}
+          MARKETPLACE_CI_ORIGIN: https://api.monkeyscode.com
+          MARKETPLACE_CI_AUDIENCE: ${{ vars.MARKETPLACE_CI_AUDIENCE }}
+          MARKETPLACE_QUARANTINE_HOST: ${{ vars.MARKETPLACE_QUARANTINE_HOST }}
+          MARKETPLACE_CI_WORKFLOW_REF: ${{ vars.MARKETPLACE_CI_WORKFLOW_REF }}
+        run: node tools/publish.mjs
+      - name: Retain publication metadata only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: publication-${{ github.run_id }}-${{ github.run_attempt }}
+          path: publication.json
+          if-no-files-found: ignore
+          retention-days: 30
