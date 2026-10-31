@@ -74,7 +74,7 @@ export function uploadUrl(grant, host, size, now = Date.now()) {
 }
 export async function publish(env = process.env, { transport = fetch, now = Date.now, sleep = ms => new Promise(r => setTimeout(r, ms)) } = {}) {
   const central = 'https://api.monkeyscode.com', plugin = env.PLUGIN_ID;
-  if (env.MARKETPLACE_CI_ENABLED !== 'true' || env.MARKETPLACE_CI_ORIGIN !== central || !env.MARKETPLACE_CI_AUDIENCE || !/^\d+$/.test(env.GITHUB_REPOSITORY_ID ?? '') || !/^[a-f0-9]{40}$/.test(env.GITHUB_SHA ?? '') || env.GITHUB_EVENT_NAME !== 'workflow_dispatch' || env.GITHUB_WORKFLOW_REF !== env.MARKETPLACE_CI_WORKFLOW_REF || !env.GITHUB_WORKFLOW_REF?.startsWith(`${env.GITHUB_REPOSITORY}/.github/workflows/publish.yml@refs/`) || !env.GITHUB_REF?.startsWith('refs/')) throw new Error('Enabled immutable CI binding required');
+  if (env.MARKETPLACE_CI_ENABLED !== 'true' || env.MARKETPLACE_CI_ORIGIN !== central || !env.MARKETPLACE_CI_AUDIENCE || !/^\d+$/.test(env.GITHUB_REPOSITORY_ID ?? '') || !/^[a-f0-9]{40}$/.test(env.GITHUB_SHA ?? '') || env.GITHUB_EVENT_NAME !== 'workflow_dispatch' || env.GITHUB_WORKFLOW_REF !== env.MARKETPLACE_CI_WORKFLOW_REF || !env.GITHUB_WORKFLOW_REF?.startsWith(`${env.GITHUB_REPOSITORY}/.github/workflows/release.yml@refs/`) || !env.GITHUB_REF?.startsWith('refs/')) throw new Error('Enabled immutable CI binding required');
   const catalog = JSON.parse(await readFile(new URL('../catalog.json', import.meta.url), 'utf8'));
   const preview = JSON.parse(await readFile(new URL('../preview-manifest.json', import.meta.url), 'utf8'));
   const selected = catalog.plugins.filter(p => p.id === plugin);
@@ -100,7 +100,7 @@ export async function publish(env = process.env, { transport = fetch, now = Date
     const c = JSON.parse(Buffer.from(oidc.value.split('.')[1], 'base64url').toString('utf8'));
     // These are fail-closed consistency checks, NOT cryptographic verification.
     // Central exchange must verify signature, issuer, audience, immutable workflow binding and nonce.
-    if (c.iss !== 'https://token.actions.githubusercontent.com' || c.aud !== env.MARKETPLACE_CI_AUDIENCE || c.repository_id !== env.GITHUB_REPOSITORY_ID || c.repository !== env.GITHUB_REPOSITORY || c.sha !== env.GITHUB_SHA || c.ref !== env.GITHUB_REF || c.workflow_ref !== env.GITHUB_WORKFLOW_REF || c.environment !== 'first-party-plugin-release' || c.event_name !== 'workflow_dispatch' || !Number.isFinite(c.exp) || c.exp * 1000 <= now() || typeof c.jti !== 'string' || !c.jti || seen.has(c.jti)) throw new Error('OIDC binding mismatch');
+    if (c.iss !== 'https://token.actions.githubusercontent.com' || c.aud !== env.MARKETPLACE_CI_AUDIENCE || c.repository_id !== env.GITHUB_REPOSITORY_ID || c.repository !== env.GITHUB_REPOSITORY || c.sha !== env.GITHUB_SHA || c.ref !== env.GITHUB_REF || c.workflow_ref !== env.GITHUB_WORKFLOW_REF || c.job_workflow_ref !== env.MARKETPLACE_CI_REUSABLE_REF || c.job_workflow_sha !== env.MARKETPLACE_CI_REUSABLE_SHA || c.environment !== 'first-party-plugin-release' || c.event_name !== 'workflow_dispatch' || !Number.isFinite(c.exp) || c.exp * 1000 <= now() || typeof c.jti !== 'string' || !c.jti || seen.has(c.jti)) throw new Error('OIDC binding mismatch');
     seen.add(c.jti);
     const exchanged = await request(`${central}/v1/marketplace/ci/exchange`, { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${oidc.value}` }, body: JSON.stringify(operation) }, transport);
     token = exchanged.publishToken;
@@ -108,7 +108,7 @@ export async function publish(env = process.env, { transport = fetch, now = Date
   }
   async function call(stage, payload) {
     if (!token || now() - refreshed >= 120000) await refresh();
-    return request(`${central}/v1/marketplace/ci/${stage}`, { method: 'POST', headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ operation, payload }) }, transport);
+    return request(`${central}/v1/marketplace/ci/${stage}`, { method: 'POST', headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ operation, action: stage, payload }) }, transport);
   }
   let state = await call('status', { operationId });
   if (state.status === 'not-found') { await call('register', metadata); state = await call('reserve', { operationId }); }
