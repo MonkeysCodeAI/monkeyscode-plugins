@@ -115,11 +115,11 @@ export async function publish(env = process.env, { transport = fetch, now = Date
   const reservationId = state.reservationId;
   if (!/^[a-f0-9]{48}$/.test(reservationId ?? '')) throw new Error('Invalid reservation');
   if (state.status === 'reserved') {
-    if (!state.upload) state = await call('reserve', { operationId });
-    if (state.reservationId !== reservationId) throw new Error('Reservation changed');
-    const url = uploadUrl(state.upload, env.MARKETPLACE_QUARANTINE_HOST, bytes.length, now());
-    const uploaded = await transport(url, { method: 'PUT', redirect: 'error', signal: AbortSignal.timeout(120000), headers: { ...state.upload.headers, 'Content-Type': 'application/gzip', 'Content-Length': String(bytes.length), 'x-ms-meta-sha256': release.archiveDigest }, body: bytes });
-    if (![201, 412].includes(uploaded.status)) throw new Error('Upload failed');
+    // Quarantine is private-network-only. Send bounded bytes through the authenticated
+    // API; backend verifies exact digest and performs create-only private storage PUT.
+    if (bytes.length > 524288) throw new Error('Upload failed');
+    const uploaded = await call('upload', { reservationId, archiveBase64: bytes.toString('base64') });
+    if (uploaded.status !== 'uploaded' || uploaded.reservationId !== reservationId) throw new Error('Upload failed');
     state = await call('complete', { operationId, reservationId, archiveDigest: release.archiveDigest, sizeBytes: bytes.length });
   }
   const deadline = now() + 600000;
