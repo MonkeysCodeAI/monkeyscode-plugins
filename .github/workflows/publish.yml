@@ -37,6 +37,8 @@ jobs:
       - name: Publish exact preview bytes (no plugin execution)
         env:
           PLUGIN_ID: ${{ inputs.plugin }}
+          GITHUB_REPOSITORY_ID: ${{ github.repository_id }}
+          GITHUB_REPOSITORY_OWNER_ID: ${{ github.repository_owner_id }}
           MARKETPLACE_CI_ENABLED: ${{ vars.MARKETPLACE_CI_ENABLED }}
           MARKETPLACE_CI_ORIGIN: https://api.monkeyscode.com
           MARKETPLACE_CI_AUDIENCE: ${{ vars.MARKETPLACE_CI_AUDIENCE }}

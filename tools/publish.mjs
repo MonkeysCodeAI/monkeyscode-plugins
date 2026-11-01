@@ -133,5 +133,9 @@ export async function publish(env = process.env, { transport = fetch, now = Date
   return result;
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
-  publish().then(r => console.log(JSON.stringify(r))).catch(() => { console.error('Publication stopped (credentials withheld); inspect central operation status.'); process.exitCode = 1; });
+  publish().then(r => console.log(JSON.stringify(r))).catch(error => {
+    const safe = ['Enabled immutable CI binding required', 'Unknown pinned release', 'Invalid release metadata', 'Release digest mismatch', 'Manifest identity mismatch', 'Runner OIDC missing', 'OIDC binding mismatch', 'Exchange failed', 'Invalid reservation', 'Reservation changed', 'Upload failed', 'Unknown publication state', 'Publication incomplete'];
+    console.error(safe.includes(error.message) ? error.message : 'Publication transport or validation failed (credentials withheld).');
+    process.exitCode = 1;
+  });
 }
