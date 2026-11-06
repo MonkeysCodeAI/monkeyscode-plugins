@@ -1,0 +1,31 @@
+{
+  "name": "refactor-migrate",
+  "version": "1.0.0",
+  "description": "Plan safe refactors, dependency and framework upgrades, and dead-code removal with staged, reversible steps.",
+  "author": {
+    "name": "MonkeysCode"
+  },
+  "license": "MIT",
+  "skills": "skills",
+  "commands": "commands",
+  "monkeyscode": {
+    "apps": [
+      "ide",
+      "agent",
+      "cli"
+    ],
+    "minVersions": {
+      "ide": "1.3.10",
+      "agent": "1.1.8",
+      "cli": "1.1.10"
+    },
+    "categories": [
+      "Refactoring",
+      "Maintenance"
+    ],
+    "icon": "icon.svg",
+    "capuchinPreferred": [
+      "commands/upgrade.md"
+    ]
+  }
+}

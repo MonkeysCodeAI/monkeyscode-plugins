@@ -1,6 +1,6 @@
 ---
 name: Next.js Toolkit
-description: App Router, RSC and caching decisions grounded in installed versions
+description: App Router, RSC, server actions and caching grounded in installed versions. Use when changing Next.js routes, data fetching or cache settings.
 trigger: manual
 ---
 # Next.js application workflow

@@ -1,6 +1,6 @@
 ---
 name: Starter safety
-description: Generate inert starter files only after destination approval
+description: Writes inert starter files only after destination approval. Use when scaffolding a new project from a MonkeysCode starter recipe.
 trigger: manual
 priority: 60
 ---

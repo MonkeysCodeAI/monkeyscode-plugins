@@ -1,0 +1,31 @@
+{
+  "name": "browser-testing",
+  "version": "1.0.0",
+  "description": "Playwright end-to-end and visual regression test drafting with resilient locators and stable fixtures.",
+  "author": {
+    "name": "MonkeysCode"
+  },
+  "license": "MIT",
+  "skills": "skills",
+  "commands": "commands",
+  "monkeyscode": {
+    "apps": [
+      "ide",
+      "agent",
+      "cli"
+    ],
+    "minVersions": {
+      "ide": "1.3.10",
+      "agent": "1.1.8",
+      "cli": "1.1.10"
+    },
+    "categories": [
+      "Testing",
+      "Frontend"
+    ],
+    "icon": "icon.svg",
+    "capuchinPreferred": [
+      "commands/e2e.md"
+    ]
+  }
+}

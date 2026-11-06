@@ -1,8 +1,8 @@
 ---
 id: "builtin:csharp"
 name: "C#"
-description: "Modern C# (12+), LINQ, async patterns, and .NET conventions"
-version: "1.0.0"
+description: "Modern C# 12+: LINQ, async/await, nullable types and records. Use when writing or reviewing C# code or .csproj files."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "language"
 triggers: [{"type":"language","languages":["csharp"]}]

@@ -1,0 +1,31 @@
+{
+  "name": "mobile-toolkit",
+  "version": "1.0.0",
+  "description": "React Native (Expo) and Flutter guidance: navigation, state, native modules, performance and store readiness.",
+  "author": {
+    "name": "MonkeysCode"
+  },
+  "license": "MIT",
+  "skills": "skills",
+  "commands": "commands",
+  "monkeyscode": {
+    "apps": [
+      "ide",
+      "agent",
+      "cli"
+    ],
+    "minVersions": {
+      "ide": "1.3.10",
+      "agent": "1.1.8",
+      "cli": "1.1.10"
+    },
+    "categories": [
+      "Mobile",
+      "Frontend"
+    ],
+    "icon": "icon.svg",
+    "capuchinPreferred": [
+      "commands/mobile-review.md"
+    ]
+  }
+}

@@ -1,8 +1,8 @@
 ---
 id: "builtin:rust"
 name: "Rust"
-description: "Rust ownership, error handling, and idiomatic patterns"
-version: "1.0.0"
+description: "Rust ownership, error handling, traits and idiomatic patterns. Use when writing or reviewing Rust code or Cargo.toml."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "language"
 triggers: [{"type":"language","languages":["rust"]}]

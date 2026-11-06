@@ -1,6 +1,6 @@
 {
   "name": "drupal-toolkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Drupal module scaffolding, migration checklists and read-only review.",
   "author": { "name": "MonkeysCode" },
   "license": "MIT",

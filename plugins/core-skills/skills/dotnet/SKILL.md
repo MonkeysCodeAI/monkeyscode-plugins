@@ -1,8 +1,8 @@
 ---
 id: "builtin:dotnet"
 name: "ASP.NET Core"
-description: "ASP.NET Core Minimal API, Entity Framework, Blazor, and .NET patterns"
-version: "1.0.0"
+description: "ASP.NET Core minimal APIs, EF Core, Blazor and .NET patterns. Use when writing or reviewing ASP.NET Core endpoints, EF models or Program.cs."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "framework"
 triggers: [{"type":"framework","frameworks":["dotnet","aspnet"]},{"type":"file_pattern","patterns":["*.csproj","Program.cs","*Controller.cs"]}]

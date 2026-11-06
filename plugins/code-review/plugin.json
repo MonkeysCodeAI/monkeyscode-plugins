@@ -1,6 +1,6 @@
 {
   "name": "code-review",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Evidence-based read-only code review with optional SARIF output.",
   "author": { "name": "MonkeysCode" },
   "license": "MIT",

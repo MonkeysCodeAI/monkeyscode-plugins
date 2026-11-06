@@ -1,0 +1,31 @@
+{
+  "name": "license-compliance",
+  "version": "1.0.0",
+  "description": "Review dependency licenses, attribution obligations and SBOM readiness from local manifests and lockfiles.",
+  "author": {
+    "name": "MonkeysCode"
+  },
+  "license": "MIT",
+  "skills": "skills",
+  "commands": "commands",
+  "monkeyscode": {
+    "apps": [
+      "ide",
+      "agent",
+      "cli"
+    ],
+    "minVersions": {
+      "ide": "1.3.10",
+      "agent": "1.1.8",
+      "cli": "1.1.10"
+    },
+    "categories": [
+      "Compliance",
+      "Security"
+    ],
+    "icon": "icon.svg",
+    "capuchinPreferred": [
+      "commands/license-audit.md"
+    ]
+  }
+}

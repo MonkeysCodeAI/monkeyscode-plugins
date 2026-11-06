@@ -1,8 +1,8 @@
 ---
 id: "builtin:springboot"
 name: "Spring Boot"
-description: "Spring Boot, Spring Data, Spring Security, and microservice patterns"
-version: "1.0.0"
+description: "Spring Boot, Spring Data, Spring Security and microservices. Use when writing or reviewing Spring Boot controllers, beans or configuration."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "framework"
 triggers: [{"type":"framework","frameworks":["spring","springboot"]},{"type":"file_pattern","patterns":["*Controller.java","*Service.java","*Repository.java"]}]

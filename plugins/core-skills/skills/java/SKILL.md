@@ -1,8 +1,8 @@
 ---
 id: "builtin:java"
 name: "Java"
-description: "Modern Java (17+), records, sealed classes, streams, and project patterns"
-version: "1.0.0"
+description: "Modern Java 17+: records, sealed classes, streams and project layout. Use when writing or reviewing Java code, pom.xml or build.gradle."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "language"
 triggers: [{"type":"language","languages":["java"]}]

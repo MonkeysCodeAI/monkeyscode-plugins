@@ -5,8 +5,17 @@ import { createHash } from 'node:crypto';
 import { gunzipSync } from 'node:zlib';
 import { pathToFileURL } from 'node:url';
 export const sha256 = value => createHash('sha256').update(value).digest('hex');
-export const SOURCE_COMMIT = '24e066886604a55e55f4f5002bae044e5d400968';
-const RELEASE = 'https://github.com/MonkeysCodeAI/monkeyscode-plugins/releases/download/first-party-preview-20261031/';
+// Closed allow-list of immutable preview releases and the monorepo commit each was built from.
+// Adding a release requires a reviewed code change here AND matching manifest metadata.
+export const RELEASES = Object.freeze({
+  'first-party-preview-20261031': '24e066886604a55e55f4f5002bae044e5d400968',
+  'first-party-preview-20261106': '9533e53ad2d6a33a382953ff610efb7b3df16162',
+});
+const RELEASE_BASE = 'https://github.com/MonkeysCodeAI/monkeyscode-plugins/releases/download/';
+export function pinnedRelease(tag, sourceCommit) {
+  if (typeof tag !== 'string' || !Object.hasOwn(RELEASES, tag) || RELEASES[tag] !== sourceCommit) throw new Error('Unknown pinned release');
+  return tag;
+}
 const MAX = 50 * 1024 * 1024;
 export function safeArchivePath(name) {
   if (!name || Buffer.byteLength(name) > 255 || /[\\\x00-\x1f\x7f:]/.test(name) || name.startsWith('/') || name.split('/').some(x => !x || x === '.' || x === '..') || name.split('/').length > 32) throw new Error('Unsafe archive path');
@@ -51,8 +60,8 @@ export async function request(url, options = {}, transport = fetch) {
   if (!response.ok) throw new Error('Remote request failed');
   const bytes = await responseBytes(response, 1048576); return bytes.length ? JSON.parse(bytes.toString('utf8')) : {};
 }
-export async function downloadArchive(name, transport = fetch) {
-  let url = new URL(RELEASE + name);
+export async function downloadArchive(name, transport = fetch, tag) {
+  let url = new URL(RELEASE_BASE + pinnedRelease(tag, RELEASES[tag]) + '/' + name);
   for (let i = 0; i < 5; i++) {
     if (url.protocol !== 'https:' || url.port || url.username || url.password || url.hash || !['github.com', 'release-assets.githubusercontent.com'].includes(url.hostname)) throw new Error('Unsafe release URL');
     const r = await transport(url, { redirect: 'manual', signal: AbortSignal.timeout(120000) });
@@ -79,10 +88,11 @@ export async function publish(env = process.env, { transport = fetch, now = Date
   const preview = JSON.parse(await readFile(new URL('../preview-manifest.json', import.meta.url), 'utf8'));
   const selected = catalog.plugins.filter(p => p.id === plugin);
   const releases = preview.plugins.filter(p => p.plugin === plugin);
-  if (selected.length !== 1 || releases.length !== 1 || !/^MonkeysCode\/[a-z0-9-]+$/.test(plugin ?? '') || selected[0].rights?.firstParty !== true || preview.sourceCommit !== SOURCE_COMMIT || preview.status !== 'unsigned-preview') throw new Error('Unknown pinned release');
+  if (selected.length !== 1 || releases.length !== 1 || !/^MonkeysCode\/[a-z0-9-]+$/.test(plugin ?? '') || selected[0].rights?.firstParty !== true || preview.status !== 'unsigned-preview' || JSON.stringify(preview.releases) !== JSON.stringify(RELEASES)) throw new Error('Unknown pinned release');
   const release = releases[0], name = plugin.split('/')[1];
-  if (release.sourceCommit !== SOURCE_COMMIT || release.status !== 'unsigned-preview' || release.marketplaceApproved !== false || release.version !== selected[0].version || !/^\d+\.\d+\.\d+(?:-[\w.-]+)?$/.test(release.version) || release.archive !== `${name}-${release.version}.tar.gz` || !/^[a-f0-9]{64}$/.test(release.archiveDigest) || !/^[a-f0-9]{64}$/.test(release.contentHash) || !Number.isSafeInteger(release.sizeBytes) || release.sizeBytes < 1 || release.sizeBytes > MAX) throw new Error('Invalid release metadata');
-  const bytes = await downloadArchive(release.archive, transport);
+  pinnedRelease(release.release, release.sourceCommit);
+  if (release.status !== 'unsigned-preview' || release.marketplaceApproved !== false || release.version !== selected[0].version || !/^\d+\.\d+\.\d+(?:-[\w.-]+)?$/.test(release.version) || release.archive !== `${name}-${release.version}.tar.gz` || !/^[a-f0-9]{64}$/.test(release.archiveDigest) || !/^[a-f0-9]{64}$/.test(release.contentHash) || !Number.isSafeInteger(release.sizeBytes) || release.sizeBytes < 1 || release.sizeBytes > MAX) throw new Error('Invalid release metadata');
+  const bytes = await downloadArchive(release.archive, transport, release.release);
   if (bytes.length !== release.sizeBytes || sha256(bytes) !== release.archiveDigest) throw new Error('Release digest mismatch');
   // contentHash is pinned preview metadata, not a claimed local recomputation.
   // Central completion must independently hash the uploaded bytes and kernel content.
@@ -127,7 +137,7 @@ export async function publish(env = process.env, { transport = fetch, now = Date
     if (!['uploaded', 'scanning', 'processing'].includes(state.status)) throw new Error('Unknown publication state');
     await sleep(10000); state = await call('status', { operationId });
   }
-  const result = { sourceCommit: SOURCE_COMMIT, ...operation, operationId, reservationId, status: state.status, marketplaceApproved: state.status === 'approved' };
+  const result = { sourceCommit: release.sourceCommit, release: release.release, ...operation, operationId, reservationId, status: state.status, marketplaceApproved: state.status === 'approved' };
   await writeFile('publication.json', JSON.stringify(result, null, 2) + '\n');
   if (!['approved', 'pending-review'].includes(state.status)) throw new Error('Publication incomplete');
   return result;

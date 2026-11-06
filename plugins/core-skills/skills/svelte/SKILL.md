@@ -1,8 +1,8 @@
 ---
 id: "builtin:svelte"
 name: "Svelte/SvelteKit"
-description: "Svelte 5 runes, SvelteKit routing, and reactive patterns"
-version: "1.0.0"
+description: "Svelte 5 runes, SvelteKit routing and load functions. Use when writing or reviewing .svelte components or SvelteKit routes."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "framework"
 triggers: [{"type":"framework","frameworks":["svelte","sveltekit"]},{"type":"file_pattern","patterns":["*.svelte","+page.svelte","+layout.svelte"]}]

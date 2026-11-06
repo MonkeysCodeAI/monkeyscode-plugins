@@ -1,0 +1,28 @@
+{
+  "name": "stripe",
+  "version": "1.0.0",
+  "description": "Review Stripe integrations for webhooks, idempotency and test-mode safety; Stripe MCP disabled until connected.",
+  "author": {
+    "name": "MonkeysCode"
+  },
+  "license": "MIT",
+  "commands": "commands",
+  "mcpServers": ".mcp.json",
+  "monkeyscode": {
+    "apps": [
+      "ide",
+      "agent",
+      "cli"
+    ],
+    "minVersions": {
+      "ide": "1.3.10",
+      "agent": "1.1.8",
+      "cli": "1.1.10"
+    },
+    "categories": [
+      "Payments",
+      "Integrations"
+    ],
+    "icon": "icon.svg"
+  }
+}

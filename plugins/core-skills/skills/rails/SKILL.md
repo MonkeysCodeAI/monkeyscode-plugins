@@ -1,8 +1,8 @@
 ---
 id: "builtin:rails"
 name: "Ruby on Rails"
-description: "Rails conventions, Active Record, Action Controller, and Hotwire"
-version: "1.0.0"
+description: "Rails conventions, Active Record, Action Controller and Hotwire. Use when writing or reviewing Rails models, controllers, migrations or views."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "framework"
 triggers: [{"type":"framework","frameworks":["rails"]},{"type":"file_pattern","patterns":["app/controllers/**","app/models/**","config/routes.rb"]}]

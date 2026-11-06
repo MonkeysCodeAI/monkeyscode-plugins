@@ -1,6 +1,6 @@
 ---
 name: MonkeysLegion
-description: Work from the verified MonkeysCloud skeleton and installed APIs
+description: MonkeysLegion PHP 8.4 apps from the verified skeleton. Use when writing or reviewing MonkeysLegion routes, DI, config or PostgreSQL code.
 trigger: framework:monkeyslegion
 priority: 50
 ---

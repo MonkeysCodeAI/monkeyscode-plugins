@@ -1,6 +1,6 @@
 ---
 name: Python API
-description: FastAPI and Django API design with isolation-focused tests
+description: FastAPI and Django REST API design with isolated tests. Use when building or reviewing Python API endpoints, request models, auth or API tests.
 trigger: manual
 ---
 # Python API work

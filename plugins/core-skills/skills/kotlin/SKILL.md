@@ -1,8 +1,8 @@
 ---
 id: "builtin:kotlin"
 name: "Kotlin"
-description: "Kotlin conventions, coroutines, and Android/JVM patterns"
-version: "1.0.0"
+description: "Kotlin idioms, coroutines, null safety and Android/JVM patterns. Use when writing or reviewing Kotlin code or Gradle Kotlin scripts."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "language"
 triggers: [{"type":"language","languages":["kotlin"]}]

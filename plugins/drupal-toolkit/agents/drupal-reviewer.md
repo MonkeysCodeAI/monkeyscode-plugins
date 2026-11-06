@@ -1,6 +1,6 @@
 ---
 name: drupal-reviewer
-description: Read-only Drupal access, caching, configuration and upgrade review
+description: Read-only. Use to review Drupal code for access checks, cache metadata, config schema and 10-to-11 upgrade risk.
 allowedTools: [read_file, grep_search, glob_files]
 permissionMode: plan
 ---

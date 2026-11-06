@@ -1,8 +1,8 @@
 ---
 id: "builtin:go"
 name: "Go"
-description: "Go conventions, error handling, concurrency, and project structure"
-version: "1.0.0"
+description: "Go conventions for errors, concurrency, interfaces and project layout. Use when writing or reviewing Go code, go.mod or Go tests."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "language"
 triggers: [{"type":"language","languages":["go"]}]

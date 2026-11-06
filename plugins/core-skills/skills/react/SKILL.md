@@ -1,8 +1,8 @@
 ---
 id: "builtin:react"
 name: "React"
-description: "React with hooks, functional components, and modern patterns"
-version: "1.0.0"
+description: "React hooks, function components, state and effects. Use when writing or reviewing React components (.jsx/.tsx), custom hooks or client state."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "framework"
 triggers: [{"type":"framework","frameworks":["react","nextjs"]},{"type":"file_pattern","patterns":["*.jsx","*.tsx"]}]

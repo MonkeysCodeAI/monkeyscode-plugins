@@ -1,8 +1,8 @@
 ---
 id: "builtin:typescript"
 name: "TypeScript"
-description: "TypeScript best practices, strict typing, generics, and module patterns"
-version: "1.0.0"
+description: "TypeScript strict typing, generics, narrowing and modules. Use when writing or reviewing .ts/.tsx code, type definitions or tsconfig.json."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "language"
 triggers: [{"type":"language","languages":["typescript","typescriptreact"]}]

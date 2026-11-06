@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 — 2026-11-02
+
+- Rewrite all 24 skill descriptions to say what each skill covers and when to use it, within the 160-character skill index budget.
+- Prompt bodies are byte-identical to 1.0.0 (prompt hashes unchanged); only metadata is re-baselined.
+- Existing enable choices and user-edited descriptions or prompts are preserved.
+
 ## 1.0.0
 
 - Package the 24 existing shared skills as declarative SKILL.md content.

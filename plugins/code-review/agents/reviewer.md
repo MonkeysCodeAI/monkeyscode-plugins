@@ -1,6 +1,6 @@
 ---
 name: reviewer
-description: Evidence-based read-only reviewer of scoped changes
+description: Read-only. Use after making changes to review a diff or paths for bugs, security and regressions with path:line evidence.
 allowedTools: [read_file, grep_search, glob_files]
 permissionMode: plan
 ---
