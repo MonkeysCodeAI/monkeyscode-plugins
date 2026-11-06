@@ -1,8 +1,8 @@
 ---
 id: "builtin:php"
 name: "PHP"
-description: "Modern PHP (8.3+), strict typing, enums, fibers, and best practices"
-version: "1.0.0"
+description: "Modern PHP 8.3+: strict types, enums, readonly properties and PSR standards. Use when writing or reviewing PHP code or composer.json."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "language"
 triggers: [{"type":"language","languages":["php"]}]

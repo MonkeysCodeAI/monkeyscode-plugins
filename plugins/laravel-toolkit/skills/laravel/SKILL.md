@@ -1,6 +1,6 @@
 ---
 name: Laravel Toolkit
-description: Laravel-specific implementation and review checklist
+description: Laravel validation, policies, queries and queues checklist. Use when changing or reviewing Laravel routes, models, jobs or migrations.
 trigger: manual
 ---
 # Laravel applications

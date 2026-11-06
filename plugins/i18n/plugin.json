@@ -1,0 +1,31 @@
+{
+  "name": "i18n",
+  "version": "1.0.0",
+  "description": "Find hard-coded strings, missing translations, ICU plural issues, locale formatting and RTL layout problems.",
+  "author": {
+    "name": "MonkeysCode"
+  },
+  "license": "MIT",
+  "skills": "skills",
+  "commands": "commands",
+  "monkeyscode": {
+    "apps": [
+      "ide",
+      "agent",
+      "cli"
+    ],
+    "minVersions": {
+      "ide": "1.3.10",
+      "agent": "1.1.8",
+      "cli": "1.1.10"
+    },
+    "categories": [
+      "Localization",
+      "Frontend"
+    ],
+    "icon": "icon.svg",
+    "capuchinPreferred": [
+      "commands/i18n-audit.md"
+    ]
+  }
+}

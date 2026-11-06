@@ -1,8 +1,8 @@
 ---
 id: "builtin:swift"
 name: "Swift"
-description: "Swift conventions, SwiftUI, Combine, and Apple platform patterns"
-version: "1.0.0"
+description: "Swift, SwiftUI, concurrency and Apple platform patterns. Use when writing or reviewing Swift code, SwiftUI views or Package.swift."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "language"
 triggers: [{"type":"language","languages":["swift"]}]

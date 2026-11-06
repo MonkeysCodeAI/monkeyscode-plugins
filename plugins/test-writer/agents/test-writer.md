@@ -1,6 +1,6 @@
 ---
 name: test-writer
-description: Read-only framework-aware test author returning deterministic drafts
+description: Read-only. Use to draft deterministic tests for scoped files in the existing framework; returns drafts and never runs them.
 allowedTools: [read_file, grep_search, glob_files]
 permissionMode: plan
 ---

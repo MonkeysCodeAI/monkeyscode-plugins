@@ -1,5 +1,5 @@
 {
-  "name": "laravel-toolkit", "version": "1.0.0",
+  "name": "laravel-toolkit", "version": "1.0.1",
   "description": "Laravel application guidance, Artisan assistance and read-only review.",
   "author": {"name": "MonkeysCode"}, "license": "MIT",
   "skills": "skills", "commands": "commands", "agents": "agents",

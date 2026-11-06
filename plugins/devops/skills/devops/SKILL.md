@@ -1,6 +1,6 @@
 ---
 name: DevOps Design
-description: Docker, Kubernetes and Terraform risk review
+description: Docker, Kubernetes and Terraform risk review. Use when writing or reviewing a Dockerfile, Kubernetes manifest, Helm chart or Terraform change.
 trigger: manual
 ---
 # Infrastructure changes

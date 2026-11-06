@@ -1,6 +1,6 @@
 ---
 name: Cloud CLI Advice
-description: Read-first AWS, Google Cloud and Azure operational guidance
+description: Read-first AWS, gcloud and az CLI guidance with approval gates. Use before running or suggesting AWS, Google Cloud or Azure CLI commands.
 trigger: manual
 ---
 # Cloud CLI workflow

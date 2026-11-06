@@ -1,0 +1,31 @@
+{
+  "name": "plugin-dev",
+  "version": "1.0.0",
+  "description": "Scaffold, validate and prepare MonkeysCode plugins for review and signed publication.",
+  "author": {
+    "name": "MonkeysCode"
+  },
+  "license": "MIT",
+  "skills": "skills",
+  "commands": "commands",
+  "monkeyscode": {
+    "apps": [
+      "ide",
+      "agent",
+      "cli"
+    ],
+    "minVersions": {
+      "ide": "1.3.10",
+      "agent": "1.1.8",
+      "cli": "1.1.10"
+    },
+    "categories": [
+      "Developer Tools",
+      "Marketplace"
+    ],
+    "icon": "icon.svg",
+    "capuchinPreferred": [
+      "commands/plugin-check.md"
+    ]
+  }
+}

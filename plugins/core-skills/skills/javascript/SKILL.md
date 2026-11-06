@@ -1,8 +1,8 @@
 ---
 id: "builtin:javascript"
 name: "JavaScript"
-description: "Modern JavaScript (ES2024+), async patterns, and module best practices"
-version: "1.0.0"
+description: "Modern JavaScript (ES2024+), async patterns and ES modules. Use when writing or reviewing .js/.mjs code or Node.js scripts."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "language"
 triggers: [{"type":"language","languages":["javascript","javascriptreact"]}]

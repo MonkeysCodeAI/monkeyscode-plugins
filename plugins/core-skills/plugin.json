@@ -1,6 +1,6 @@
 {
   "name": "core-skills",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The 24 shared MonkeysCode framework and language skills, preserving existing prompt bytes and user choices.",
   "author": { "name": "MonkeysCode" },
   "license": "MIT",

@@ -1,6 +1,6 @@
 {
   "name": "postgres-readonly",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Opt-in structured PostgreSQL inspection through a verified local psql binary; no arbitrary SQL.",
   "author": "MonkeysCode",
   "license": "MIT",

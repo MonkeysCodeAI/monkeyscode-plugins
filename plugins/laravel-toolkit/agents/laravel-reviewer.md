@@ -1,6 +1,6 @@
 ---
 name: laravel-reviewer
-description: Read-only review of Laravel authorization, data access and tests
+description: Read-only. Use to review Laravel code for authorization, tenant scoping, N+1 queries, queues and migration safety.
 tools: read_file, grep_search, search_files
 permissionMode: plan
 ---

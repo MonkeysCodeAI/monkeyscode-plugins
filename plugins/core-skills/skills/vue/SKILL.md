@@ -1,8 +1,8 @@
 ---
 id: "builtin:vue"
 name: "Vue.js"
-description: "Vue 3 Composition API, script setup, Pinia, and Nuxt patterns"
-version: "1.0.0"
+description: "Vue 3 Composition API, script setup, Pinia and Nuxt. Use when writing or reviewing .vue components, composables or Pinia stores."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "framework"
 triggers: [{"type":"framework","frameworks":["vue","nuxt"]},{"type":"file_pattern","patterns":["*.vue"]}]

@@ -1,8 +1,8 @@
 ---
 id: "builtin:laravel"
 name: "Laravel"
-description: "Laravel PHP framework conventions, Eloquent, Blade, Artisan, and best practices"
-version: "1.0.0"
+description: "Laravel conventions for Eloquent, Blade, Artisan, queues and validation. Use when writing or reviewing Laravel controllers, models, routes or Blade views."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "framework"
 triggers: [{"type":"framework","frameworks":["laravel"]},{"type":"file_pattern","patterns":["*.blade.php","routes/*.php","app/Http/**"]}]

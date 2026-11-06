@@ -1,0 +1,28 @@
+{
+  "name": "data-analysis",
+  "version": "1.0.0",
+  "description": "Write and review analytical SQL, pandas/Polars code and notebooks with reproducible, honest results.",
+  "author": {
+    "name": "MonkeysCode"
+  },
+  "license": "MIT",
+  "skills": "skills",
+  "commands": "commands",
+  "monkeyscode": {
+    "apps": [
+      "ide",
+      "agent",
+      "cli"
+    ],
+    "minVersions": {
+      "ide": "1.3.10",
+      "agent": "1.1.8",
+      "cli": "1.1.10"
+    },
+    "categories": [
+      "Data",
+      "Analytics"
+    ],
+    "icon": "icon.svg"
+  }
+}

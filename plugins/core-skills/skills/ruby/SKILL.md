@@ -1,8 +1,8 @@
 ---
 id: "builtin:ruby"
 name: "Ruby"
-description: "Ruby conventions, Rails patterns, and idiomatic best practices"
-version: "1.0.0"
+description: "Idiomatic Ruby conventions, blocks, modules and gems. Use when writing or reviewing Ruby code, a Gemfile or RSpec/Minitest tests."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "language"
 triggers: [{"type":"language","languages":["ruby"]}]

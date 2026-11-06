@@ -1,8 +1,8 @@
 ---
 id: "builtin:drupal"
 name: "Drupal"
-description: "Drupal CMS development with hooks, plugins, entities, and Twig templates"
-version: "1.0.0"
+description: "Drupal hooks, plugins, entities, services and Twig. Use when writing or reviewing a Drupal module, theme, .info.yml, routing file or Twig template."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "framework"
 triggers: [{"type":"framework","frameworks":["drupal"]},{"type":"file_pattern","patterns":["*.module","*.install","*.theme","*.routing.yml"]}]

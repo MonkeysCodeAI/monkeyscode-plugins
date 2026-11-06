@@ -1,8 +1,8 @@
 ---
 id: "builtin:python"
 name: "Python"
-description: "Python best practices, type hints, and modern patterns"
-version: "1.0.0"
+description: "Modern Python: type hints, dataclasses, pathlib, async and pytest. Use when writing or reviewing Python code, pyproject.toml or Python tests."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "language"
 triggers: [{"type":"language","languages":["python"]}]

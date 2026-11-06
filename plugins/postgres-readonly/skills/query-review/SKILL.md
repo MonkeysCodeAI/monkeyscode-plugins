@@ -1,6 +1,6 @@
 ---
 name: PostgreSQL query review
-description: Review SQL without connecting to a database
+description: Reviews SQL as text for unsafe writes, locks, scans and injection. Use when reviewing PostgreSQL queries or migrations without a live database.
 trigger: manual
 priority: 50
 ---

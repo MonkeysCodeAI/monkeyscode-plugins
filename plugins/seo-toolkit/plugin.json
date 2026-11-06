@@ -1,0 +1,6 @@
+{
+  "name": "seo-toolkit", "version": "1.0.0",
+  "description": "Evidence-based technical SEO, structured data and AI-search readiness for web codebases.",
+  "author": {"name": "MonkeysCode"}, "license": "MIT", "skills": "skills", "commands": "commands", "agents": "agents",
+  "monkeyscode": {"apps": ["ide", "agent", "cli"], "minVersions": {"ide": "1.3.10", "agent": "1.1.8", "cli": "1.1.10"}, "categories": ["SEO", "Web Performance"], "icon": "icon.svg", "capuchinPreferred": ["commands/seo-audit.md"]}
+}

@@ -1,8 +1,8 @@
 ---
 id: "builtin:django"
 name: "Django"
-description: "Django models, views, templates, DRF, and admin customization"
-version: "1.0.0"
+description: "Django models, views, templates, DRF and admin. Use when writing or reviewing Django apps, models, migrations, serializers or settings."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "framework"
 triggers: [{"type":"framework","frameworks":["django"]},{"type":"file_pattern","patterns":["*/views.py","*/models.py","*/urls.py","*/admin.py"]}]

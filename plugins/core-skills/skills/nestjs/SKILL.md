@@ -1,8 +1,8 @@
 ---
 id: "builtin:nestjs"
 name: "NestJS"
-description: "NestJS modules, controllers, providers, guards, and TypeORM patterns"
-version: "1.0.0"
+description: "NestJS modules, controllers, providers, guards and TypeORM. Use when writing or reviewing NestJS modules, DTOs, guards or services."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "framework"
 triggers: [{"type":"framework","frameworks":["nestjs"]},{"type":"file_pattern","patterns":["*.controller.ts","*.service.ts","*.module.ts","*.guard.ts"]}]

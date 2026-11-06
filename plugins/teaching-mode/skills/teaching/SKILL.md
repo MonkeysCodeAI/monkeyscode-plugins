@@ -1,6 +1,6 @@
 ---
 name: Practical Teaching
-description: Explain code decisions and offer optional exercises without incomplete deliverables
+description: Explains code decisions with optional exercises and complete deliverables. Use when the user is learning or asks why or how code works.
 trigger: manual
 ---
 # Teach through working code

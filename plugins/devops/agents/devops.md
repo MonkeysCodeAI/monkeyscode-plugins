@@ -1,6 +1,6 @@
 ---
 name: devops
-description: Read-only container and infrastructure reviewer
+description: Read-only. Use to review Docker, Kubernetes or Terraform files for leaked secrets, privileges, exposure and rollback risk.
 tools: read_file, grep_search, search_files
 permissionMode: plan
 ---

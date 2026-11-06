@@ -1,8 +1,8 @@
 ---
 id: "builtin:docker"
 name: "Docker & Kubernetes"
-description: "Containerization, orchestration, and cloud-native deployment"
-version: "1.0.0"
+description: "Dockerfiles, Compose and container deployment practices. Use when writing or reviewing a Dockerfile, docker-compose.yml or container build."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "devops"
 triggers: [{"type":"file_pattern","patterns":["Dockerfile*","docker-compose*.yml","*.yaml"]},{"type":"framework","frameworks":["docker","kubernetes"]}]

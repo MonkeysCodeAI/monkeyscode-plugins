@@ -1,8 +1,8 @@
 ---
 id: "builtin:nextjs"
 name: "Next.js"
-description: "Next.js App Router, Server Components, Server Actions, and deployment"
-version: "1.0.0"
+description: "Next.js App Router, Server Components, Server Actions and caching. Use when writing or reviewing Next.js routes, layouts or next.config."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "framework"
 triggers: [{"type":"framework","frameworks":["nextjs"]},{"type":"file_pattern","patterns":["app/**/page.tsx","app/**/layout.tsx","app/**/route.ts"]}]

@@ -1,8 +1,8 @@
 ---
 id: "builtin:angular"
 name: "Angular"
-description: "Angular 17+, signals, standalone components, and RxJS patterns"
-version: "1.0.0"
+description: "Angular 17+ signals, standalone components and RxJS. Use when writing or reviewing Angular components, services or templates."
+version: "1.0.1"
 author: "MonkeysCode"
 category: "framework"
 triggers: [{"type":"framework","frameworks":["angular"]},{"type":"file_pattern","patterns":["*.component.ts","*.module.ts","*.service.ts"]}]

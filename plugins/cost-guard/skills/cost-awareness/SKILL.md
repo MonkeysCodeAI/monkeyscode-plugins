@@ -1,6 +1,6 @@
 ---
 name: Cost Awareness
-description: Use targeted context and distinguish reported costs from billing authority
+description: Targeted context and honest cost reporting. Use when a task spans a large codebase or the user asks about token usage, cost or budgets.
 trigger: manual
 ---
 # Efficient context

@@ -1,6 +1,6 @@
 {
   "name": "security-audit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scoped OWASP-oriented audit and bounded pre-tool secret guard.",
   "author": { "name": "MonkeysCode" },
   "license": "MIT",

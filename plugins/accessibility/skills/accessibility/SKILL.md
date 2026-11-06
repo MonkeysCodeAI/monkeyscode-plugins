@@ -1,6 +1,6 @@
 ---
 name: Accessibility Review
-description: Practical WCAG-oriented component design and testing
+description: WCAG-oriented component design and testing. Use when building or reviewing forms, dialogs, menus, focus handling, contrast or keyboard support.
 trigger: manual
 ---
 # Accessible components
